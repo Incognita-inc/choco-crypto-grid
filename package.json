@@ -1,0 +1,32 @@
+{
+  "name": "choco-crypto-grid",
+  "version": "1.0.0",
+  "description": "<img src=\"https://github.com/chocomocha-factory/choco-crypto-grid/blob/main/crypto-grid-banner-1.png?raw=true\" title=\"px(픽셀) 크기 설정\" alt=\"banner.png\"></img><br/>",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chocomocha-factory/choco-crypto-grid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chocomocha-factory/choco-crypto-grid/issues"
+  },
+  "homepage": "https://github.com/chocomocha-factory/choco-crypto-grid#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  }
+}
