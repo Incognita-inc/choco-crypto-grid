@@ -1,6 +1,7 @@
 {
   "name": "choco-crypto-grid",
   "version": "1.0.0",
+  "private": true,
   "description": "<img src=\"https://github.com/chocomocha-factory/choco-crypto-grid/blob/main/crypto-grid-banner-1.png?raw=true\" title=\"px(픽셀) 크기 설정\" alt=\"banner.png\"></img><br/>",
   "main": "index.js",
   "directories": {
@@ -29,6 +30,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
+    "lerna": "^4.0.0",
     "mocha": "^9.2.2",
     "prettier": "^2.6.2"
   },
