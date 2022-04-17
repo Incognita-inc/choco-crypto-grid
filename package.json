@@ -31,5 +31,8 @@
     "husky": "^7.0.4",
     "mocha": "^9.2.2",
     "prettier": "^2.6.2"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
