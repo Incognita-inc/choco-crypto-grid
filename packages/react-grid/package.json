@@ -1,5 +1,5 @@
 {
-  "name": "react-grid",
+  "name": "@chocomocha-factory/react-grid",
   "version": "1.0.0",
   "description": "choco-crypto-grid for react",
   "main": "index.js",
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@choco-crypto/grid": "1.0.0"
+    "@chocomocha-factory/grid": "1.0.0"
   }
 }
