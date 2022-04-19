@@ -1,8 +1,10 @@
 /**
 idea
-   - 2차원 배열이 row, column key를 index로 갖는 것 처럼 rowKey, columnKey를 2차원 배열의 key라고 생각.
-   - 형태가 변하지 않는 base table을 만들고 columm이나 row의 위치가 변경되는건 따로 index 순서만 관리
-   - 렌더링은 CSS 사용해서 위치 수정 (tansform)
+   -  rowKey, columnKey를 2차원 배열의 key라고 생각.
+   -  rowKey, columnKey로 dataMap을 만들고 columm이나 row의 위치가 변경되는건 따로 index 순서만 관리
+         -  이떄 dataMap의 순서는 변경되지 않음
+         -  데이터 업데이트 할 떄 마다 내부에서는 변경된 data column key로 sort된 값을 저장
+   -  렌더링은 CSS tansform x,y 사용해서 위치 수정
 
 data = [
   {

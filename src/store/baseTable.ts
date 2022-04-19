@@ -1,6 +1,11 @@
 import { TableConfig } from "../../@types/tableConfig";
 
-import { OriginData, MainBody, DataMap } from "../../@types/dataSource";
+import {
+  OriginData,
+  MainBody,
+  DataMap,
+  sortedData,
+} from "../../@types/dataSource";
 
 export default class BaseTable {
   /**
@@ -15,6 +20,11 @@ export default class BaseTable {
    * 정제된 데이터
    */
   #dataMap: DataMap;
+
+  /**
+   * headers.column 들로 key를 가진 sortedData
+   */
+  #sortedData: sortedData;
 
   /**
    * Table이 렌더링 될 메인 div Body
@@ -59,6 +69,7 @@ export default class BaseTable {
    * data값 update 시키는 함수
    *
    * TODO
+   *  - sortedData에 updatedData기반으로 row keys 재정렬
    *  - update 된 값이 sortKey인지 확인하고 필요시 재졍렬
    */
   updateDataMap(updatedData: OriginData) {
@@ -80,18 +91,21 @@ export default class BaseTable {
   /**
    * row 이동시키는 함수
    *
+   * @param {number} sourceIdx - row index to move
+   * @param {number} targetIdx - row index where to move
+   *
    * TODO
    *  - row 별 height 계산해서 sourceIdx에 있는 row를 targetIdx로 이동
    *  - transformY 계산 후 partialRender 호출
    */
-  moveRow() {}
+  moveRow(sourceIdx: number, targetIdx: number) {}
 
   /**
    * 전체 렌더링
    *
    * TODO
    *  - dataMap 기반으로 렌더링
-   *  - sortKey(default=name)
+   *  - sortKey(default=name)로 최초 정렬 이후 변경되는 데이터 sort는 CSS transform 으로.
    */
   render() {}
 
