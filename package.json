@@ -8,7 +8,9 @@
     "example": "examples"
   },
   "scripts": {
-    "test": "mocha"
+    "test:types:all": "lerna run --stream test:types",
+    "test": "mocha",
+    "build:all": "lerna run --stream build"
   },
   "repository": {
     "type": "git",
