@@ -1,4 +1,7 @@
-const dummyUserData = [
+import { DataByUser } from "../@types/dataSource";
+import { TableConfig } from "../@types/tableConfig";
+
+export const dummyUserData: DataByUser = [
   {
     rowKey: "btc",
     columnKey: "name",
@@ -40,7 +43,7 @@ const dummyUserData = [
   },
 ];
 
-const dummyTableConfig = {
+export const dummyTableConfig: TableConfig = {
   data: dummyUserData,
   fields: ["value1", "value2"],
   headers: {
