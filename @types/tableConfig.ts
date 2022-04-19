@@ -1,8 +1,8 @@
 /**
 idea
    - 2차원 배열이 row, column key를 index로 갖는 것 처럼 rowKey, columnKey를 2차원 배열의 key라고 생각.
-   - 형태가 변하지 않는 base table을 만들고 columm이나 row의 위치가 변경되는건 따로 index(key) 순서만 관리
-   - data update는 base table에서만 이뤄지고 display 할 때는 row, column 의 index(key) 순서에 따라 보여주기
+   - 형태가 변하지 않는 base table을 만들고 columm이나 row의 위치가 변경되는건 따로 index 순서만 관리
+   - 렌더링은 CSS 사용해서 위치 수정 (tansform)
 
 data = [
   {
@@ -103,22 +103,9 @@ tableConfig = {
 
  */
 
+import { DataByUser } from "./dataSource";
+
 export type fields = Array<string>;
-
-export type RowData = {
-  [k: string]: {
-    v: number;
-    t: string;
-  };
-};
-
-export type DataOrigin = {
-  rowKey: string;
-  columnKey: string;
-  data: RowData;
-};
-
-export type Data = Array<DataOrigin>;
 
 export type HeaderMeta = {
   type: string;
@@ -138,7 +125,7 @@ export type HeaderColumn = {
 export type Headers = {
   meta: Array<HeaderMeta>;
   column: Array<HeaderColumn>;
-  sortKey: string;
+  sortKey: string; // default=name
 };
 
 export type Integration = {
@@ -146,7 +133,7 @@ export type Integration = {
 };
 
 export type TableConfig = {
-  data: Data;
+  data: DataByUser;
   fields: fields;
   headers: Headers;
   integration: Integration;
