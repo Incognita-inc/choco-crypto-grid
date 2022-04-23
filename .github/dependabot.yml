@@ -1,0 +1,13 @@
+version: 2
+updates:
+    - package-ecosystem: "npm"
+      directory: "/"
+      commit-message:
+          prefix: "chore: "
+      schedule:
+          interval: "monthly"
+          time: "09:00"
+          timezone: "Asia/Seoul"
+    # Fixme: develop 브랜치 생성 후 develop으로 변경 필요
+    target-branch: "master"
+    open-pull-requests-limit: 5
