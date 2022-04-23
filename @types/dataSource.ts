@@ -1,7 +1,7 @@
 type RowData = {
   [columnKey: string]: {
-    v: number | string;
-    t?: string;
+    value: number | string;
+    field?: string;
     dom?: HTMLDivElement;
   };
 };
