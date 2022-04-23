@@ -1,18 +1,17 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "isolatedModules": true,
-    "skipLibCheck": true,
     "target": "es5",
     "module": "es6",
+    "baseUrl": ".",
+    "sourceMap": true,
     "allowJs": true,
-    "strict": true,
-    "moduleResolution": "Node",
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "importHelpers": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
+    "noEmit": true,
+    "strict": true
   }
 }
