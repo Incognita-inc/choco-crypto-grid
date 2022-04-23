@@ -9,6 +9,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "production",
+  target: ["web", "es5"],
   module: {
     rules: [
       {
@@ -34,6 +35,7 @@ module.exports = merge(common, {
         parallel: os.cpus().length - 1,
         terserOptions: {
           compress: { drop_console: true },
+          output: { comments: false },
         },
       }),
       new CssMinimizerPlugin({

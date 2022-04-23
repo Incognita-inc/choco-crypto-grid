@@ -1,5 +1,5 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -12,7 +12,13 @@ module.exports = {
       {
         test: /\.(ts|js)$/,
         exclude: /node_modules/,
-        use: { loader: "babel-loader", options: { rootMode: "upward" } },
+        use: [
+          // { loader: "babel-loader", options: { rootMode: "upward" } },
+          {
+            loader: "ts-loader",
+            options: { transpileOnly: true },
+          },
+        ],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
@@ -24,16 +30,19 @@ module.exports = {
       },
     ],
   },
+  plugins: [new ForkTsCheckerWebpackPlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
-    extensions: [".ts", "js"],
+    extensions: [".ts", ".js"],
   },
   output: {
     path: path.resolve(__dirname, "./build"),
-    filename: `choco-crypto-[name].bundle.${!isDev && "min"}.js`,
+    filename: `[name].[chunkhash].${!isDev && "min"}.js`,
+    assetModuleFilename: "static/assets/[hash][ext][query]",
     publicPath: "/",
     clean: true,
+    compareBeforeEmit: true,
   },
 };

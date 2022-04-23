@@ -5,9 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test:types": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start:grid": "webpack serve --config webpack.dev.js",
-    "build": "NODE_ENV=production && webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC"

@@ -1,10 +1,11 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "development",
-  devtool: "inline-source-map",
+  devtool: "eval-source-map",
   devServer: {
     client: {
       overlay: {
@@ -25,4 +26,9 @@ module.exports = merge(common, {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "examples/index.html"),
+    }),
+  ],
 });
