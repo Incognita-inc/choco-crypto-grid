@@ -1,30 +1,11 @@
-import "@/store/test.css";
+(() => {
+  const $chocoRoot = document.getElementById("choco-grid");
+  const $template = document.createElement("div");
+  const testHtml = `<div style="color: tomato">dev server </div>`;
+  $template.innerHTML = testHtml;
 
-const arrow = (): string => "dd";
-console.log(arrow());
-console.log(process.env.NODE_ENV);
+  if (!$chocoRoot) return;
+  $chocoRoot.appendChild($template);
+})();
 
-interface IceAmericano {
-  price: number;
-}
-
-const aa = (name: number, obj: IceAmericano): void => {
-  console.log({ name, price: obj.price });
-  console.info("info");
-};
-/**
- * @licence dd
- */
-const americano: IceAmericano = { price: 3000 };
-
-aa(1, americano);
-
-/**
- * !지워지냐
- */
-const testHtml = `<div class="testClass"></div>`;
-
-const abc = () => `${testHtml}span`;
-
-abc();
-export default arrow;
+export {};
