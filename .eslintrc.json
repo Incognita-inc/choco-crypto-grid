@@ -3,7 +3,8 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
-    "standard-with-typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:prettier/recommended",
     "airbnb-base",
@@ -14,6 +15,8 @@
   },
   "rules": {
     "@typescript-eslint/semi": "off",
-    "@typescript-eslint/space-before-function-paren": "off"
+    "@typescript-eslint/space-before-function-paren": "off",
+    "import/extensions": "off",
+    "@typescript-eslint/quotes": "off"
   }
 }
