@@ -1,0 +1,13 @@
+{
+  "name": "@chocomocha-factory/grid",
+  "version": "1.0.0",
+  "description": "grid for crypto",
+  "main": "index.ts",
+  "scripts": {
+    "test:types": "tsc",
+    "start:grid": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

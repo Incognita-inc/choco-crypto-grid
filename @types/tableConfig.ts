@@ -5,7 +5,7 @@ export type fields = Array<string>;
 export type HeaderMeta = {
   type: string;
   formatter: {
-    [field: string]: Function;
+    [t: string]: Function;
   };
   style?: {
     color: string;

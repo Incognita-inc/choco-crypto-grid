@@ -1,6 +1,7 @@
 import { DataByUser } from "../@types/dataSource";
 import { TableConfig } from "../@types/tableConfig";
 
+// data value 하나인 경우에는 가운데 정렬
 export const dummyUserData: DataByUser = [
   {
     rowKey: "btc",
@@ -8,6 +9,7 @@ export const dummyUserData: DataByUser = [
     data: {
       value1: {
         v: "비트코인",
+        t: "",
       },
       value2: {
         v: "BTC",
@@ -49,6 +51,7 @@ export const dummyTableConfig: TableConfig = {
   headers: {
     meta: [
       {
+        // style의 경우는 클래스 명 받을 수 있게 (cell별로 class 명 받을 수 있도록)
         type: "percent_up",
         formatter: {
           value1: (v) => `+${v}%`,

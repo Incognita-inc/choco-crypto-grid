@@ -4,7 +4,7 @@
 |모듈|링크|
 |------|:---|
 |choco-crypto-grid|https://github.com/chocomocha-factory/choco-crypto-grid|
-|choco-crypto-grid-react|https://github.com/chocomocha-factory/choco-crypto-grid-react|
+|choco-crypto-grid-react||
 
 
 ## Choco Crypto Grid

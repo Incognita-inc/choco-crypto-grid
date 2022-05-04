@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "strict": true
+  }
+}
